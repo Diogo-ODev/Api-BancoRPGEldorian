@@ -1,4 +1,14 @@
+using ApiEldorianWebApplication.BancoDeDados;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("Conexao");
+
+builder.Services.AddDbContext<BancoContext>(config =>
+{
+    config.UseSqlite(connectionString);
+});
 
 // Add services to the container.
 
