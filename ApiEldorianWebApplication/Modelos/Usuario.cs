@@ -11,6 +11,6 @@ namespace ApiEldorianWebApplication.Modelos
         public string emailUsuario { get; set; }
         public string senhaUsuario { get; set; }
         public string nomeUsuario { get; set; }
-        public ICollection<Personagem> Personagens { get; set; }
+        public ICollection<Personagem>? Personagens { get; set; }
     }
 }
